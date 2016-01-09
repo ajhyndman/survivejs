@@ -1,0 +1,7 @@
+{
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "indent": 4,
+    "maxerr": 50
+}
