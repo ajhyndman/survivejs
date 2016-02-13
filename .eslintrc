@@ -14,6 +14,7 @@
         "semi": 2,
         "space-infix-ops": 2,
         "space-in-parens": 2,
+        "no-extra-semi": 0,
         "no-trailing-spaces": 2,
         "no-underscore-dangle": 2,
 
