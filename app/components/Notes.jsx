@@ -6,7 +6,10 @@ import NoteActions from '../actions/NoteActions';
 
 const Notes = ({notes, onValueClick, onEdit, onDelete}) => {
     return (
-        <ul className="card-content">{notes.map((note) =>
+        <ul
+            className="card-content"
+            style={{margin: 0}}>
+            {notes.map((note) =>
             <Note
                 editing={note.editing}
                 id={note.id}

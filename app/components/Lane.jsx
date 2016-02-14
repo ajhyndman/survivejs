@@ -41,7 +41,10 @@ class Lane extends React.Component {
         return connectDropTarget(
             <div className="col s12 m6 l4">
                 <div {...props} className="card grey lighten-5">
-                    <div className="section" onClick={this.activateLaneEdit}>
+                    <div
+                        className="section"
+                        onClick={this.activateLaneEdit}
+                        style={{overflow: 'hidden'}}>
                         <div className="col s3">
                             <button className="waves-effect waves-light btn-floating blue-grey left" onClick={this.addNote}>＋</button>
                         </div>
@@ -52,7 +55,7 @@ class Lane extends React.Component {
                             onEdit={this.editName}
                         />
                         <div className="col s3">
-                            <button className="waves-effect waves-light btn-floating red right" onClick={this.deleteLane}>⨉</button>
+                            <button className="waves-effect waves-dark btn-floating grey lighten-5 right blue-grey-text text-darken-5 right" onClick={this.deleteLane}>⨉</button>
                         </div>
                     </div>
                     <AltContainer

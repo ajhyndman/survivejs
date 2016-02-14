@@ -1,5 +1,6 @@
 // import 'main.css';
 import 'materialize-css/dist/css/materialize.css';
+import './overrides.css';
 
 import 'materialize-css/dist/js/materialize.js'
 import App from 'App';
@@ -15,3 +16,5 @@ persist(alt, storage, 'app');
 
 
 ReactDOM.render(<App />, document.getElementById('app'));
+
+$('.materialize-textarea').trigger('autoresize');

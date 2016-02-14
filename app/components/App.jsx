@@ -12,7 +12,7 @@ import LaneStore from '../stores/LaneStore';
 class App extends React.Component {
     render() {
         return (
-            <div className="blue-grey-text text-darken-2 container center-align">
+            <div className="blue-grey-text text-darken-2 container">
                 <div className="section">
                     <button className="waves-effect waves-light btn-floating blue-grey" onClick={this.addLane}>＋</button>
                 </div>

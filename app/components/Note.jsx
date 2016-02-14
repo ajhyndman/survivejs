@@ -39,16 +39,26 @@ class Note extends React.Component {
         // Pass through if we are editing
         const dragSource = editing ? a => a : connectDragSource;
 
-        return dragSource(connectDropTarget(<li className="card small">
-            <div className="card-content">
+        return dragSource(connectDropTarget(<li
+            className="card card-panel"
+            style={{padding: 0}}>
+            <div>
                 <Editable
+                    className="card-content"
                     editing={note.editing}
                     value={note.task}
                     onValueClick={onValueClick.bind(null, note.id)}
                     onEdit={onEdit.bind(null, note.id)}
-                    onDelete={onDelete.bind(null, note.id)}
                     onMove={onMove.bind(null, note.id)}
                 />
+                <div
+                    className="card-action"
+                    style={{overflow: 'auto'}}>
+                    <button
+                        className="waves-effect btn-floating grey lighten-5 right blue-grey-text text-darken-2"
+                        onClick={onDelete.bind(null, note.id)}
+                    >⨉</button>
+                </div>
             </div>
         </li>));
     }

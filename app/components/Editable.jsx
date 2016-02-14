@@ -16,35 +16,23 @@ class Editable extends React.Component {
 
     renderEdit = () => {
         // Deal with blur and input handlers.  These map to DOM events.
-        return <input type="text"
+        return <textarea
+                autoFocus={true}
+                className="materialize-textarea"
                 ref = {
                     (e) => e ? e.selectionStart = this.props.value.length : null
                 }
-                autoFocus={true}
                 defaultValue={this.props.value}
                 onBlur={this.finishEdit}
                 onKeyPress={this.checkEnter}
+                styles={{boxSizing: 'border-box', maxWidth: '100%'}}
             />;
     };
 
     renderValue = () => {
-        const onDelete = this.props.onDelete;
-
         return (
             <div onClick={this.props.onValueClick}>
-                <span className="value">{this.props.value}</span>
-                { onDelete ? this.renderDelete() : null }
-            </div>
-        );
-    };
-
-    renderDelete = () => {
-        return (
-            <div className="card-action">
-                <button
-                   className="waves waves-light btn-floating red right"
-                   onClick={this.props.onDelete}
-                >⨉</button>
+                <div>{this.props.value}</div>
             </div>
         );
     };
